@@ -11,6 +11,7 @@
   <author>Stefan Scherzinger</author>
   <author>Pascal Becker</author>
   <maintainer email="scherzin@fzi.de">Stefan Scherzinger</maintainer>
+  <maintainer email="Harry.Arnst@de.schunk.com">Harry Arnst</maintainer>
   <license>GPL-3.0-or-later</license>
 
   <url type="website">http://wiki.ros.org/schunk_svh_library</url>
