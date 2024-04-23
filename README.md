@@ -14,7 +14,7 @@ Users can develop custom wrappers on top in their preferred robotics framework.
 
 ---
 
-**Note:** Switch to [these instructions](https://github.com/SCHUNK-GmbH-Co-KG/schunk_svh_ros_driver) when working in a ROS1/ROS2 context.
+**Note:** Switch to [these instructions](https://github.com/SCHUNK-SE-Co-KG/schunk_svh_ros_driver) when working in a ROS1/ROS2 context.
 
 ---
 
