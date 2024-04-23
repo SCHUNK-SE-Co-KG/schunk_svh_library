@@ -37,6 +37,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cstdint>
 
 #include <schunk_svh_library/serial/ByteOrderConversion.h>
 
@@ -86,8 +87,8 @@ inline driver_svh::ArrayBuilder& operator>>(driver_svh::ArrayBuilder& ab, SVHFir
 {
   // Stream operator can not handle arrays (due to missing size information) to make things easy we
   // just copy the data around. Feel free to do something else
-  std::vector<uint8_t> text(48);
-  std::vector<uint8_t> svh(4);
+  std::vector<std::uint8_t> text(48);
+  std::vector<std::uint8_t> svh(4);
 
   ab >> svh >> data.version_major >> data.version_minor >> text;
 

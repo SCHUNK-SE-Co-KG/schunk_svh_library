@@ -49,6 +49,7 @@
 #include <chrono>
 #include <functional>
 #include <memory>
+#include <cstdint>
 
 using driver_svh::serial::Serial;
 
@@ -126,11 +127,11 @@ private:
   uint16_t m_length;
 
   //! Checksum of packet
-  uint8_t m_checksum1;
-  uint8_t m_checksum2;
+  std::uint8_t m_checksum1;
+  std::uint8_t m_checksum2;
 
   //! length of received serial data
-  std::vector<uint8_t> m_data;
+  std::vector<std::uint8_t> m_data;
 
   //! pointer to array builder object for packet receive
   driver_svh::ArrayBuilder m_ab;

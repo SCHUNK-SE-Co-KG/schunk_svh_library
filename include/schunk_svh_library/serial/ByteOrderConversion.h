@@ -38,13 +38,14 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
+#include <cstdint>
 
 
 namespace driver_svh {
 
 //! template function for adding data to an array while converting everything into correct endianess
 template <typename T>
-size_t toLittleEndian(const T& data, std::vector<uint8_t>& array, size_t& write_pos)
+size_t toLittleEndian(const T& data, std::vector<std::uint8_t>& array, size_t& write_pos)
 {
   // Resize the target array in case it it to small to avoid out of bounds acces
   if (write_pos + sizeof(T) > array.size())
@@ -61,7 +62,7 @@ size_t toLittleEndian(const T& data, std::vector<uint8_t>& array, size_t& write_
   {
     // Copy each byte into the bytearray, always convert byte order to little endian regardles of
     // source architecture
-    array[write_pos + i] = static_cast<uint8_t>((data >> (i * 8)) & 0xFF);
+    array[write_pos + i] = static_cast<std::uint8_t>((data >> (i * 8)) & 0xFF);
   }
 
   return write_pos + sizeof(T);
@@ -70,20 +71,20 @@ size_t toLittleEndian(const T& data, std::vector<uint8_t>& array, size_t& write_
 //! Template specialization for float as these have to be handled seperately
 template <>
 DRIVER_SVH_IMPORT_EXPORT size_t toLittleEndian<float>(const float& data,
-                                                      std::vector<uint8_t>& array,
+                                                      std::vector<std::uint8_t>& array,
                                                       size_t& write_pos);
 
 //! Template specialization for float as these have to be handled seperately
 template <>
 DRIVER_SVH_IMPORT_EXPORT size_t toLittleEndian<double>(const double& data,
-                                                       std::vector<uint8_t>& array,
+                                                       std::vector<std::uint8_t>& array,
                                                        size_t& write_pos);
 
 
 //! template function for reating data out of an array while converting everything into correct
 //! endianess
 template <typename T>
-size_t fromLittleEndian(T& data, std::vector<uint8_t>& array, size_t& read_pos)
+size_t fromLittleEndian(T& data, std::vector<std::uint8_t>& array, size_t& read_pos)
 {
   // TODO: Remove once everything is tested :)
   // std::cout << "From Little Endian Called with: "<<" Size_T: "<< sizeof(T) << " Pos: " <<
@@ -119,13 +120,13 @@ size_t fromLittleEndian(T& data, std::vector<uint8_t>& array, size_t& read_pos)
 //! Template specialization for float as these have to be handled seperately
 template <>
 DRIVER_SVH_IMPORT_EXPORT size_t fromLittleEndian<float>(float& data,
-                                                        std::vector<uint8_t>& array,
+                                                        std::vector<std::uint8_t>& array,
                                                         size_t& read_pos);
 
 //! Template specialization for float as these have to be handled seperately
 template <>
 DRIVER_SVH_IMPORT_EXPORT size_t fromLittleEndian<double>(double& data,
-                                                         std::vector<uint8_t>& array,
+                                                         std::vector<std::uint8_t>& array,
                                                          size_t& read_pos);
 
 //! template class holding an array and the current index for write commands. Can be used to easily
@@ -160,7 +161,7 @@ public:
   size_t read_pos;
 
   //! array of template type TArray
-  std::vector<uint8_t> array;
+  std::vector<std::uint8_t> array;
 
 
   //!
