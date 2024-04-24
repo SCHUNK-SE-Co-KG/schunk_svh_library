@@ -1,6 +1,12 @@
-name: Melodic
+name: Rolling
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    # Run every Friday at 6:30 am to detect breaking APIs
+    - cron: '30 6 * * 5'
+
 
 jobs:
   industrial_ci:
@@ -8,8 +14,8 @@ jobs:
       fail-fast: false
       matrix:
         env:
-          - {ROS_DISTRO: melodic, ROS_REPO: testing}
-          - {ROS_DISTRO: melodic, ROS_REPO: main}
+          - {ROS_DISTRO: rolling, ROS_REPO: testing}
+          - {ROS_DISTRO: rolling, ROS_REPO: main}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
