@@ -35,10 +35,10 @@
 #include "schunk_svh_library/ImportExport.h"
 
 #include <assert.h>
+#include <cstdint>
 #include <iomanip>
 #include <iostream>
 #include <vector>
-#include <cstdint>
 
 
 namespace driver_svh {

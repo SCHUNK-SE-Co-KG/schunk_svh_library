@@ -34,10 +34,10 @@
 #ifndef SVHFIRMWAREINFO_H
 #define SVHFIRMWAREINFO_H
 
+#include <cstdint>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cstdint>
 
 #include <schunk_svh_library/serial/ByteOrderConversion.h>
 
