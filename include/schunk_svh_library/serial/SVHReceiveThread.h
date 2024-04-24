@@ -47,9 +47,9 @@
 
 #include <atomic>
 #include <chrono>
+#include <cstdint>
 #include <functional>
 #include <memory>
-#include <cstdint>
 
 using driver_svh::serial::Serial;
 

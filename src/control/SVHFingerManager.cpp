@@ -1276,12 +1276,12 @@ std::vector<SVHCurrentSettings> SVHFingerManager::getDefaultCurrentSettings()
     -500.0f, 500.0f, 0.405f, 4e-6f, -4.0f, 4.0f, 0.7f, 60.0f, -255.0f, 255.0f);
 
 
-  current_settings[SVH_THUMB_FLEXION] = m_current_settings_given[SVH_THUMB_FLEXION]
-                                          ? m_current_settings[SVH_THUMB_FLEXION]
-                                          : cur_set_thumb; // thumb flexion
-  current_settings[SVH_THUMB_OPPOSITION] = m_current_settings_given[SVH_THUMB_OPPOSITION]
-                                             ? m_current_settings[SVH_THUMB_OPPOSITION]
-                                             : cur_set_thumb_opposition; // thumb opposition
+  current_settings[SVH_THUMB_FLEXION]       = m_current_settings_given[SVH_THUMB_FLEXION]
+                                                ? m_current_settings[SVH_THUMB_FLEXION]
+                                                : cur_set_thumb; // thumb flexion
+  current_settings[SVH_THUMB_OPPOSITION]    = m_current_settings_given[SVH_THUMB_OPPOSITION]
+                                                ? m_current_settings[SVH_THUMB_OPPOSITION]
+                                                : cur_set_thumb_opposition; // thumb opposition
   current_settings[SVH_INDEX_FINGER_DISTAL] = m_current_settings_given[SVH_INDEX_FINGER_DISTAL]
                                                 ? m_current_settings[SVH_INDEX_FINGER_DISTAL]
                                                 : cur_set_distal_joint; // index finger distal joint
@@ -1363,9 +1363,9 @@ std::vector<SVHPositionSettings> SVHFingerManager::getDefaultPositionSettings(co
 
 
   // Return either the default values or the ones given from outside
-  position_settings[SVH_THUMB_FLEXION] = m_position_settings_given[SVH_THUMB_FLEXION]
-                                           ? m_position_settings[SVH_THUMB_FLEXION]
-                                           : pos_set_thumb_flexion; // thumb flexion
+  position_settings[SVH_THUMB_FLEXION]    = m_position_settings_given[SVH_THUMB_FLEXION]
+                                              ? m_position_settings[SVH_THUMB_FLEXION]
+                                              : pos_set_thumb_flexion; // thumb flexion
   position_settings[SVH_THUMB_OPPOSITION] = m_position_settings_given[SVH_THUMB_OPPOSITION]
                                               ? m_position_settings[SVH_THUMB_OPPOSITION]
                                               : pos_set_thumb_opposition; // thumb opposition
@@ -1385,12 +1385,12 @@ std::vector<SVHPositionSettings> SVHFingerManager::getDefaultPositionSettings(co
     m_position_settings_given[SVH_MIDDLE_FINGER_PROXIMAL]
       ? m_position_settings[SVH_MIDDLE_FINGER_PROXIMAL]
       : pos_set_finger_middle_proximal; // middle finger proximal joint
-  position_settings[SVH_RING_FINGER] = m_position_settings_given[SVH_RING_FINGER]
-                                         ? m_position_settings[SVH_RING_FINGER]
-                                         : pos_set_finger_ring; // ring finger
-  position_settings[SVH_PINKY] = m_position_settings_given[SVH_PINKY]
-                                   ? m_position_settings[SVH_PINKY]
-                                   : pos_set_finger_pinky; // pinky
+  position_settings[SVH_RING_FINGER]   = m_position_settings_given[SVH_RING_FINGER]
+                                           ? m_position_settings[SVH_RING_FINGER]
+                                           : pos_set_finger_ring; // ring finger
+  position_settings[SVH_PINKY]         = m_position_settings_given[SVH_PINKY]
+                                           ? m_position_settings[SVH_PINKY]
+                                           : pos_set_finger_pinky; // pinky
   position_settings[SVH_FINGER_SPREAD] = m_position_settings_given[SVH_FINGER_SPREAD]
                                            ? m_position_settings[SVH_FINGER_SPREAD]
                                            : pos_set_spread; // finger spread

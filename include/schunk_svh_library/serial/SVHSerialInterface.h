@@ -121,7 +121,8 @@ private:
   std::shared_ptr<Serial> m_serial_device;
 
   //! cecksum calculation
-  void calcCheckSum(std::uint8_t& check_sum1, std::uint8_t& check_sum2, const SVHSerialPacket& packet);
+  void
+  calcCheckSum(std::uint8_t& check_sum1, std::uint8_t& check_sum2, const SVHSerialPacket& packet);
 
   //! thread for receiving serial packets
   std::thread m_receive_thread;

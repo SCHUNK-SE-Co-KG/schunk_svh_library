@@ -85,7 +85,7 @@ public:
     static Logger instance;
     return instance;
   }
-  Logger(const Logger&) = delete;
+  Logger(const Logger&)         = delete;
   void operator=(Logger const&) = delete;
   virtual ~Logger()             = default;
 
