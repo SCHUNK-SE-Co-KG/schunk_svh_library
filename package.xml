@@ -10,13 +10,13 @@
   <author>Johannes Mangler</author>
   <author>Stefan Scherzinger</author>
   <author>Pascal Becker</author>
-  <maintainer email="scherzin@fzi.de">Stefan Scherzinger</maintainer>
+  <maintainer email="stefan.scherzinger@de.schunk.com">Stefan Scherzinger</maintainer>
   <maintainer email="Harry.Arnst@de.schunk.com">Harry Arnst</maintainer>
   <license>GPL-3.0-or-later</license>
 
   <url type="website">http://wiki.ros.org/schunk_svh_library</url>
-  <url type="bugtracker">https://github.com/fzi-forschungszentrum-informatik/schunk_svh_library/issues</url>
-  <url type="repository">https://github.com/fzi-forschungszentrum-informatik/schunk_svh_library</url>
+  <url type="bugtracker">https://github.com/SCHUNK-SE-Co-KG/schunk_svh_library/issues</url>
+  <url type="repository">https://github.com/SCHUNK-SE-Co-KG/schunk_svh_library</url>
 
   <build_depend>boost</build_depend>
   <test_depend>boost</test_depend>
